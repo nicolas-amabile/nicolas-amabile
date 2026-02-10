@@ -185,16 +185,19 @@ hr {
 /* ===== Toggle buttons ===== */
 
 .controls {
-  position: fixed;
-
-  /* mobile first placement */
-  top: 12px;
-  right: 12px;
+  position: sticky;
+  top: 0;
 
   display: flex;
+  justify-content: flex-end;
   gap: 8px;
   align-items: center;
+
+  padding: 12px 0;
+  margin-bottom: 1rem;
+
   backdrop-filter: blur(6px);
+  z-index: 10;
 }
 
 /* restore original spacing on larger screens */
