@@ -242,17 +242,34 @@ hr {
 
 @media print {
   body {
-    font-size: 11.5pt;
-    padding: 16px;
-    max-width: 100%;
+    padding: 8px 10px;
+    line-height: 1.45;
   }
 
-  h1 {
-    font-size: 18pt;
-  }
-
+  section,
   h2 {
-    font-size: 12pt;
+    margin-top: 1.2rem;
+  }
+
+  ul,
+  ol {
+    margin: 0.2rem 0 0.4rem;
+  }
+
+  li {
+    margin-bottom: 0.15rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   a {
