@@ -1,0 +1,213 @@
+/* ===== Matte retro palette ===== */
+
+:root {
+  --bg: #f4efe6;
+  --text: #2d2a26;
+  --muted: #5f5b55;
+
+  /* Retro pop matte accents */
+  --primary: #c06c5b;
+  /* terracotta coral */
+  --secondary: #355c7d;
+  /* muted denim blue */
+  --accent: #6c8b6b;
+  /* faded moss green */
+  --highlight: #c79a3b;
+  /* vintage mustard */
+
+  --border: #ded8cf;
+}
+
+[data-theme="dark"] {
+  --bg: #1f1e1c;
+  --text: #e6e1d9;
+  --muted: #a59f96;
+
+  --primary: #e08b79;
+  --secondary: #6f8faa;
+  --accent: #8da989;
+  --highlight: #d7b468;
+
+  --border: #3a3834;
+}
+
+
+
+/* ===== Typography ===== */
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-weight: 300;
+  /* visually close to 200 on most system fonts */
+  letter-spacing: 0.01em;
+
+  line-height: 1.65;
+
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 32px 56px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Headings lighter, more editorial */
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  color: var(--secondary);
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+section,
+h2 {
+  margin-top: 3rem;
+}
+
+p,
+li {
+  font-size: 0.98rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* ===== Links ===== */
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--primary);
+  color: var(--highlight);
+  text-decoration: underline;
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+blockquote {
+  color: var(--secondary);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
+/* ===== Subtle separators ===== */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+  opacity: 0.5;
+}
+
+::selection {
+  background: var(--highlight);
+  color: white;
+}
+
+/* ===== Toggle buttons ===== */
+
+.controls {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  backdrop-filter: blur(6px);
+}
+
+.toggle {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+
+  background: var(--bg);
+  color: var(--text);
+
+  cursor: pointer;
+  margin-left: 6px;
+
+  font-weight: 300;
+  transition: all 0.15s ease;
+}
+
+.toggle:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+
+/* ===== Print optimization ===== */
+
+@media print {
+  body {
+    font-size: 11.5pt;
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 18pt;
+  }
+
+  h2 {
+    font-size: 12pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .controls {
+    display: none !important;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+}

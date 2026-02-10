@@ -1,0 +1,4 @@
+title: Nicolas Amabile – Resume
+markdown: kramdown
+kramdown:
+  input: GFM
