@@ -5,15 +5,10 @@
   --text: #2d2a26;
   --muted: #5f5b55;
 
-  /* Retro pop matte accents */
   --primary: #c06c5b;
-  /* terracotta coral */
   --secondary: #355c7d;
-  /* muted denim blue */
   --accent: #6c8b6b;
-  /* faded moss green */
   --highlight: #c79a3b;
-  /* vintage mustard */
 
   --border: #ded8cf;
 }
@@ -32,7 +27,6 @@
 }
 
 
-
 /* ===== Typography ===== */
 
 body {
@@ -46,14 +40,13 @@ body {
     sans-serif;
 
   font-weight: 300;
-  /* visually close to 200 on most system fonts */
   letter-spacing: 0.01em;
-
   line-height: 1.65;
 
-  max-width: 860px;
+  /* MOBILE FIRST */
+  padding: 20px 16px 28px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 48px 32px 56px;
 
   background: var(--bg);
   color: var(--text);
@@ -61,7 +54,16 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* Headings lighter, more editorial */
+/* Desktop enhancement */
+@media (min-width: 700px) {
+  body {
+    max-width: 860px;
+    padding: 48px 32px 56px;
+  }
+}
+
+
+/* ===== Headings ===== */
 
 h1,
 h2,
@@ -71,15 +73,15 @@ h3 {
   margin-top: 2rem;
 }
 
+/* Mobile sizes first */
 h1 {
-  font-size: 2.2rem;
-  font-weight: 300;
+  font-size: 1.7rem;
   letter-spacing: 0.03em;
   color: var(--primary);
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.85;
@@ -87,10 +89,26 @@ h2 {
 }
 
 h3 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--accent);
 }
+
+/* Restore original desktop sizing */
+@media (min-width: 700px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+  }
+}
+
 
 section,
 h2 {
@@ -105,6 +123,21 @@ li {
 li {
   margin-bottom: 0.35rem;
 }
+
+
+/* ===== Responsive media fixes (important for MD embeds) ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 
 /* ===== Links ===== */
 
@@ -133,6 +166,7 @@ blockquote {
   padding-left: 1rem;
 }
 
+
 /* ===== Subtle separators ===== */
 
 hr {
@@ -147,17 +181,28 @@ hr {
   color: white;
 }
 
+
 /* ===== Toggle buttons ===== */
 
 .controls {
   position: fixed;
-  top: 24px;
-  right: 24px;
+
+  /* mobile first placement */
+  top: 12px;
+  right: 12px;
 
   display: flex;
   gap: 8px;
   align-items: center;
   backdrop-filter: blur(6px);
+}
+
+/* restore original spacing on larger screens */
+@media (min-width: 700px) {
+  .controls {
+    top: 24px;
+    right: 24px;
+  }
 }
 
 .toggle {
