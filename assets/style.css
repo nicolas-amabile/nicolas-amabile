@@ -45,6 +45,8 @@ body {
 
   /* MOBILE FIRST */
   padding: 20px 16px 28px;
+  padding-bottom: 90px;
+
   max-width: 100%;
   margin: 0 auto;
 
@@ -185,19 +187,27 @@ hr {
 /* ===== Toggle buttons ===== */
 
 .controls {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 12px;
+  right: 16px;
 
   display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
-
-  padding: 12px 0;
-  margin-bottom: 1rem;
 
   backdrop-filter: blur(6px);
   z-index: 10;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+}
+
+.toggle {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* restore original spacing on larger screens */

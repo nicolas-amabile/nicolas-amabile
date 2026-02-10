@@ -24,8 +24,8 @@ function toggleResume(){
 </script>
 
 <div class="controls">
-  <button class="toggle" onclick="toggleTheme()">🌗 Theme</button>
-  <button class="toggle secondary" onclick="toggleResume()">📄 Version</button>
+  <button class="toggle" onclick="toggleTheme()">🌗</button>
+  <button class="toggle secondary" onclick="toggleResume()">📄</button>
 </div>
 
 # Nicolás Amábile
