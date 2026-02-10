@@ -196,8 +196,15 @@ hr {
   align-items: center;
 
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 8px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+
   z-index: 10;
   bottom: calc(12px + env(safe-area-inset-bottom));
+  padding: 2px;
 }
 
 .toggle {
@@ -208,14 +215,6 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* restore original spacing on larger screens */
-@media (min-width: 700px) {
-  .controls {
-    top: 24px;
-    right: 24px;
-  }
 }
 
 .toggle {
