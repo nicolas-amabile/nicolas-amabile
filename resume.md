@@ -16,8 +16,7 @@ from \~90 min to \~20 min while mentoring a team of SDETs and improving
 reliability.
 
 Industry experience: FinTech, Healthcare, Entertainment platforms,
-Blockchain/Web3, Enterprise SaaS (construction domain, confidential
-client).
+Blockchain/Web3, Enterprise SaaS (Construction domain).
 
 ---
 
